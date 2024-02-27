@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Account History" icon-name="standard:account">
+        <!-- Datatable with Pagination End -->
+        <div class="slds-m-around_medium">            
+                <lightning-datatable key-field="id" data={data} columns={columns}>
+                </lightning-datatable>
+            </div>
+            <div class="slds-m-around_medium">
+                <lightning-button label="Previous" icon-name="utility:chevronleft" onclick={previousHandler}
+                    disabled={isPreviousDisable}>
+                </lightning-button>
+                         
+                <lightning-button label="Next" icon-name="utility:chevronright" icon-position="right" onclick={nextHandler}
+                    disabled={isNextDisable}>
+                </lightning-button>
+            </div>
+            
+    
+        
+    </lightning-card>
+</template>
